@@ -25,7 +25,7 @@ html {
     align-items: center;
     padding: 0 12.5%;
 
-    &-logo{
+    &-logo {
       position: absolute;
       top: 50%;
       left: 15px;
@@ -40,6 +40,11 @@ html {
       margin: 10px;
       filter: grayscale(1) brightness(0.6);
       cursor: pointer;
+      transition: filter .25s linear;
+
+      &:hover {
+        filter: grayscale(0.25);
+      }
 
       &.active {
         filter: grayscale(0);
