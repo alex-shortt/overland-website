@@ -1,13 +1,4 @@
-$brandpadding: 25px;
-
 .brand {
-  display: flex;
-  flex-direction: column;
-  width: calc(100% - #{$brandpadding} - #{$brandpadding});
-  height: calc(100% - #{$brandpadding});
-  padding: #{$brandpadding};
-  padding-top: 0;
-
   &-content {
     flex: 1;
     display: flex;

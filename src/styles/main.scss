@@ -16,7 +16,17 @@ html {
   font-family: "avant", sans-serif;
 }
 
+$ovrpadding: 25px;
 .ovr {
+  &-container {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - #{$ovrpadding} - #{$ovrpadding});
+    height: calc(100% - #{$ovrpadding});
+    padding: #{$ovrpadding};
+    padding-top: 0;
+  }
+
   &-footer {
     position: relative;
     height: 100px;
@@ -40,7 +50,7 @@ html {
       margin: 10px;
       filter: grayscale(1) brightness(0.6);
       cursor: pointer;
-      transition: filter .25s linear;
+      transition: all 0.25s linear;
 
       &:hover {
         filter: grayscale(0.25);
@@ -48,6 +58,7 @@ html {
 
       &.active {
         filter: grayscale(0);
+        transform: scale(1.1);
       }
     }
   }
@@ -55,3 +66,4 @@ html {
 
 @import "home.scss";
 @import "brand.scss";
+@import "contact.scss";

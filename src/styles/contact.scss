@@ -1,0 +1,22 @@
+.contact {
+  &-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  &-info {
+    height: 175px;
+    margin: 50px;
+
+    & > img {
+      height: 100%;
+    }
+
+    & > h3 {
+      color: white;
+    }
+  }
+}
