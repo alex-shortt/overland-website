@@ -7,6 +7,7 @@ $("#ovr-music").click(() => (window.location.href = "/music"))
 $("#ovr-animation").click(() => (window.location.href = "/animation"))
 $("#ovr-about").click(() => (window.location.href = "/about"))
 $("#ovr-contact").click(() => (window.location.href = "/contact"))
+$("#ovr-logo").click(() => (window.location.href = "/"))
 
 // HOME
 $("#home-body").ripples({
