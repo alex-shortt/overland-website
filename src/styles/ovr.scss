@@ -1,0 +1,54 @@
+
+$ovrpadding: 25px;
+.ovr {
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - #{$ovrpadding} - #{$ovrpadding});
+  height: calc(100% - #{$ovrpadding});
+  padding: #{$ovrpadding};
+  padding-top: 0;
+
+  &-content {
+    flex: 1;
+    display: flex;
+    margin-bottom: 30px;
+  }
+
+  &-footer {
+    position: relative;
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 12.5%;
+
+    &-logo {
+      position: absolute;
+      top: 50%;
+      left: 15px;
+      transform: translateY(-50%);
+      height: 65%;
+      width: auto;
+      cursor: pointer;
+    }
+
+    &-icon {
+      height: calc(100% - 20px);
+      width: auto;
+      margin: 10px;
+      filter: grayscale(1) brightness(0.6);
+      cursor: pointer;
+      transition: all 0.25s linear;
+
+      &:hover {
+        filter: grayscale(0.25);
+      }
+
+      &.active {
+        filter: grayscale(0);
+        transform: scale(1.1);
+      }
+    }
+  }
+}
