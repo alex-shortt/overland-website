@@ -1,21 +1,19 @@
 $animationTime: 0.35s;
 
-.brand {
-  &-content {
-    flex: 1;
-    display: flex;
-    margin-bottom: 30px;
-  }
+.media {
+  flex: 1;
+  display: flex;
+  margin-bottom: 30px;
 
   &-video {
     position: relative;
     flex: 1;
 
-    &:hover > .brand-video-overlay {
+    &:hover > .media-video-overlay {
       opacity: 0.4;
     }
 
-    &:hover > .brand-video-text {
+    &:hover > .media-video-text {
       opacity: 0;
     }
 
