@@ -58,6 +58,7 @@ $animationTime: 0.35s;
 
       & > .left {
         text-align: left;
+        margin-left: 4vw;
 
         & > span {
           transform: translateX(-100%);
@@ -70,6 +71,7 @@ $animationTime: 0.35s;
 
       & > .right {
         text-align: right;
+        margin-right: 3.5vw;
 
         & > span {
           transform: translateX(100%);
@@ -91,12 +93,17 @@ $animationTime: 0.35s;
       background-position: center center;
       filter: brightness(0.8);
 
+      & > iframe {
+        min-height: 100%;
+        min-width: 100%;
+      }
+
       &.left {
-        background-image: url("https://images.unsplash.com/photo-1553969546-6f7388a7e07c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80");
+        background-image: url("https://img.youtube.com/vi/NuQIfcNAnCg/maxresdefault.jpg");
       }
 
       &.right {
-        background-image: url("https://images.unsplash.com/photo-1553969488-312435bebbf4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=935&q=80 ");
+        background-image: url("https://img.youtube.com/vi/Ep9TCmd_PC0/maxresdefault.jpg");
       }
     }
 
