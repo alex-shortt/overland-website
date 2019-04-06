@@ -1,51 +1,4 @@
-var brand = [
-  {
-    video: "NuQIfcNAnCg",
-    topText: "Khaotic Collective",
-    bottomText: "March Release"
-  },
-  {
-    video: "Ep9TCmd_PC0",
-    topText: "Khaotic Collective",
-    bottomText: "Sequoia Launch"
-  },
-  {
-    thumbBroken: true,
-    video: "FRJ0go0OEWM",
-    topText: "Reef",
-    bottomText: "Beach Freely"
-  },
-  {
-    video: "B8_Y4tdwntw",
-    topText: "Splat",
-    bottomText: "Directors Cut"
-  },
-  {
-    video: "OUp_3q2pMo0",
-    topText: "Toyota",
-    bottomText: "2016 Tacoma"
-  },
-  {
-    video: "-01KseFHJsE",
-    topText: "Lucid Monday",
-    bottomText: "Los Angeles"
-  },
-  {
-    video: "4KxoIRQcEsM",
-    topText: "Fox",
-    bottomText: "Sports"
-  },
-  {
-    video: "leRoYrFXaiM",
-    topText: "Subway",
-    bottomText: "Daniel Suarez"
-  },
-  {
-    video: "h3nbcv2T8xk",
-    topText: "Legacy",
-    bottomText: "Sports Performance"
-  }
-]
+import { brand, music, animation } from "./definitions.js"
 
 function insertContent(coll, ind, isLeft) {
   const video = coll[ind]
@@ -62,20 +15,40 @@ function insertContent(coll, ind, isLeft) {
   bgImage.css("background-image", `url('${thumb}')`)
 }
 
-export function placeBrandVideos() {
-  let randVideoLeft = Math.floor(Math.random() * brand.length)
-  while (brand[randVideoLeft].thumbBroken != null) {
-    randVideoLeft = Math.floor(Math.random() * brand.length)
+function getUniqueVideos(coll) {
+  let randVideoLeft = Math.floor(Math.random() * coll.length)
+  while (coll[randVideoLeft].thumbBroken != null) {
+    randVideoLeft = Math.floor(Math.random() * coll.length)
   }
 
   let randVideoRight = randVideoLeft
   while (
     randVideoRight == randVideoLeft ||
-    brand[randVideoRight].thumbBroken != null
+    coll[randVideoRight].thumbBroken != null
   ) {
-    randVideoRight = Math.floor(Math.random() * brand.length)
+    randVideoRight = Math.floor(Math.random() * coll.length)
   }
 
-  insertContent(brand, randVideoLeft, true)
-  insertContent(brand, randVideoRight, false)
+  return [randVideoLeft, randVideoRight]
+}
+
+export function placeBrandVideos() {
+  const videos = getUniqueVideos(brand)
+  console.log("brand")
+  insertContent(brand, videos[0], true)
+  insertContent(brand, videos[1], false)
+}
+
+export function placeMusicVideos() {
+  const videos = getUniqueVideos(music)
+  console.log("music")
+  insertContent(music, videos[0], true)
+  insertContent(music, videos[1], false)
+}
+
+export function placeAnimationVideos() {
+  const videos = getUniqueVideos(animation)
+  console.log("anim")
+  insertContent(animation, videos[0], true)
+  insertContent(animation, videos[1], false)
 }

@@ -1,7 +1,7 @@
 import "./styles/main.scss"
 import "./components/jquery.ripples.js"
 import { pushPage, showPage, getHash } from "./components/navigation.js"
-import {placeBrandVideos} from "./components/media.js"
+import { placeBrandVideos } from "./components/media.js"
 
 // GLOBAL
 $(".ovr-brand").click(() => pushPage("brand"))

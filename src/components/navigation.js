@@ -1,5 +1,10 @@
 import { delay } from "../common/promises.js"
 import { loadHome, unloadHome } from "./home.js"
+import {
+  placeBrandVideos,
+  placeMusicVideos,
+  placeAnimationVideos
+} from "./media.js"
 
 export function getHash() {
   return location.hash.replace(/^#/, "") || ""
@@ -62,6 +67,14 @@ export async function showPage(page) {
       $("#contact").removeClass("hidden")
     } else {
       $("#media").removeClass("hidden")
+    }
+
+    if (page == "brand") {
+      placeBrandVideos()
+    } else if (page == "music") {
+      placeMusicVideos()
+    } else if (page == "animation") {
+      placeAnimationVideos()
     }
   }
 }
