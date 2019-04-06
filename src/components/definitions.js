@@ -9,12 +9,12 @@ export const brand = [
     topText: "Khaotic Collective",
     bottomText: "Sequoia Launch"
   },
-  {
-    thumbBroken: true,
-    video: "FRJ0go0OEWM",
-    topText: "Reef",
-    bottomText: "Beach Freely"
-  },
+  // {
+  //   thumbBroken: true,
+  //   video: "FRJ0go0OEWM",
+  //   topText: "Reef",
+  //   bottomText: "Beach Freely"
+  // },
   {
     video: "B8_Y4tdwntw",
     topText: "Splat",
@@ -61,12 +61,12 @@ export const music = [
 ]
 
 export const animation = [
-  {
-    thumbBroken: true,
-    video: "FRJ0go0OEWM",
-    topText: "Reef",
-    bottomText: "Beach Freely"
-  },
+  // {
+  //   thumbBroken: true,
+  //   video: "FRJ0go0OEWM",
+  //   topText: "Reef",
+  //   bottomText: "Beach Freely"
+  // },
   {
     video: "B8_Y4tdwntw",
     topText: "Splat",

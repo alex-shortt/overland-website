@@ -2,7 +2,7 @@ import "./styles/main.scss"
 import "./components/jquery.ripples.js"
 import { pushPage, showPage, getHash } from "./components/navigation.js"
 import { placeBrandVideos } from "./components/media.js"
-import { openVideoPlayer } from "./components/videoPlayer.js"
+import { openVideoPlayer, incrVideo, closeVideoPlayer } from "./components/videoPlayer.js"
 
 // GLOBAL
 $(".ovr-brand").click(() => pushPage("brand"))
@@ -14,9 +14,13 @@ $(".ovr-logo").click(() => pushPage(""))
 
 // MEDIA
 placeBrandVideos()
-$(".media-video.left").click(() => {openVideoPlayer(true)})
-$(".media-video.right").click(() => {openVideoPlayer(false)})
+$(".media-video.left").click(() => openVideoPlayer(true))
+$(".media-video.right").click(() => openVideoPlayer(false))
 
+// MODAL
+$("#modal-close").click(() => closeVideoPlayer())
+$("#modal-left").click(() => incrVideo(-1))
+$("#modal-right").click(() => incrVideo(1))
 
 // SITE
 showPage(getHash())
