@@ -8,6 +8,7 @@ $animationTime: 0.35s;
   &-video {
     position: relative;
     flex: 1;
+    overflow: hidden;
 
     &:hover > .media-video-overlay {
       opacity: 0.4;
@@ -15,6 +16,11 @@ $animationTime: 0.35s;
 
     &:hover > .media-video-text {
       opacity: 0;
+    }
+
+    &:hover > .media-video-video {
+      transition: transform 15s linear;
+      transform: scale(1.35);
     }
 
     &-text {
@@ -92,6 +98,7 @@ $animationTime: 0.35s;
       background-size: cover;
       background-position: center center;
       filter: brightness(0.8);
+      transition: transform 0.5s linear;
 
       & > iframe {
         min-height: 100%;

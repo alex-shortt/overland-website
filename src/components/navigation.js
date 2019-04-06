@@ -63,6 +63,9 @@ export async function showPage(page) {
   } else {
     $("#ovr").removeClass("hidden")
 
+    $(`.ovr-footer-icon`).removeClass("active")
+    $(`.ovr-${page}`).addClass("active")
+
     if (page == "contact") {
       $("#contact").removeClass("hidden")
     } else {

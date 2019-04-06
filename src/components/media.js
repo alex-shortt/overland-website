@@ -34,21 +34,21 @@ function getUniqueVideos(coll) {
 
 export function placeBrandVideos() {
   const videos = getUniqueVideos(brand)
-  console.log("brand")
   insertContent(brand, videos[0], true)
   insertContent(brand, videos[1], false)
+  $("#media").data({ collection: "brand", videos: videos })
 }
 
 export function placeMusicVideos() {
   const videos = getUniqueVideos(music)
-  console.log("music")
   insertContent(music, videos[0], true)
   insertContent(music, videos[1], false)
+  $("#media").data({ collection: "music", videos: videos })
 }
 
 export function placeAnimationVideos() {
   const videos = getUniqueVideos(animation)
-  console.log("anim")
   insertContent(animation, videos[0], true)
   insertContent(animation, videos[1], false)
+  $("#media").data({ collection: "animation", videos: videos })
 }
