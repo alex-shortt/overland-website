@@ -19,7 +19,7 @@ function getIndex(isLeft) {
 }
 
 function updateVideo() {
-  if (!coll || !ind) {
+  if (!coll) {
     $("#modal-container > iframe").remove()
     return
   }
@@ -37,7 +37,8 @@ export function incrVideo(dir) {
   if (ind > coll.length - 1) ind = 0
   if (ind < 0) ind = coll.length - 1
 
-  console.log(ind)
+  console.log(coll)
+  console.log("ind", ind)
 
   updateVideo()
 }
@@ -52,7 +53,6 @@ export function openVideoPlayer(isLeft) {
 
 export function closeVideoPlayer() {
   coll = null
-  ind = null
 
   updateVideo()
   $("#modal").removeClass("open")

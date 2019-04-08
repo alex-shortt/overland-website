@@ -36,6 +36,7 @@
     font-size: 40pt;
     width: 10%;
     text-align: center;
+    cursor: pointer;
 
     &:hover {
       opacity: 0.8;
@@ -57,6 +58,7 @@
     color: white;
     transition: opacity 0.25s linear;
     font-size: 40pt;
+    cursor: pointer;
 
     &:hover {
       opacity: 0.8;
