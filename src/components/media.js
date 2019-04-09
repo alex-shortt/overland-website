@@ -1,81 +1,49 @@
 import { brand, music, animation } from "./definitions.js"
 import { openVideoPlayer } from "./videoPlayer.js"
 
-function insertContent(coll, ind, isLeft) {
+function clearVideos() {
+  $("#media").html("")
+}
+
+function insertContent(coll, ind) {
   const video = coll[ind]
-  const dir = isLeft ? "left" : "right"
+  const dir = ind % 2 == 0 ? "left" : "right"
   const thumb = `https://img.youtube.com/vi/${video.video}/maxresdefault.jpg`
 
-  const parent = $(`.media-video.${dir}`)
-  const topText = $(`.media-video.${dir} > div > h1`)
-  const bottomText = $(`.media-video.${dir} > div > h2`)
-  const bgImage = $(`.media-video-video.${dir}`)
+  $("#media").append(`<div id="video-${ind}" class="media-video ${dir}">
+            <div class="media-video-overlay">
+              <i class="fas fa-play"></i>
+            </div>
+            <div class="media-video-text">
+              <h1 class="left"><span>${video.topText}</span></h1>
+              <h2 class="right"><span>${video.bottomText}</span></h2>
+            </div>
+            <div class="media-video-video ${dir}" style="background-image:url('${thumb}')"></div>
+          </div>`)
 
-  parent.off("click")
-  parent.click(() => openVideoPlayer(ind))
-  topText.html(`<span>${video.topText}</span>`)
-  bottomText.html(`<span>${video.bottomText}</span>`)
-  bgImage.css("background-image", `url('${thumb}')`)
-}
-
-function getUniqueVideos(coll) {
-  let randVideoLeft = Math.floor(Math.random() * coll.length)
-  while (coll[randVideoLeft].thumbBroken != null) {
-    randVideoLeft = Math.floor(Math.random() * coll.length)
-  }
-
-  let randVideoRight = randVideoLeft
-  while (
-    randVideoRight == randVideoLeft ||
-    coll[randVideoRight].thumbBroken != null
-  ) {
-    randVideoRight = Math.floor(Math.random() * coll.length)
-  }
-
-  return [randVideoLeft, randVideoRight]
-}
-
-function insertVidoTiles(coll) {
-  $("#media-bottom").html("")
-  $("#media-bottom").scrollTop()
-
-  for (const [i, vid] of coll.entries()) {
-    const thumb = `https://img.youtube.com/vi/${vid.video}/maxresdefault.jpg`
-    $("#media-bottom").append(
-      `<div id="video-${i}" class="media-tile">
-        <div class="media-tile-box">
-          <div class="media-tile-image" style="background-image:url('${thumb}')"></div>
-          <i class="fas fa-play media-tile-play"></i>
-        </div>
-        <h2>${vid.topText}</h2>
-        <h4>${vid.bottomText}</h4>
-      </div>`
-    )
-
-    $(`#video-${i}`).click(() => openVideoPlayer(i))
-  }
+  $(`#video-${ind}`).click(() => openVideoPlayer(ind))
 }
 
 export function placeBrandVideos() {
-  const videos = getUniqueVideos(brand)
-  insertContent(brand, videos[0], true)
-  insertContent(brand, videos[1], false)
-  insertVidoTiles(brand)
-  $("#media").data({ collection: "brand", videos: videos })
+  clearVideos()
+  for (let i = 0; i < brand.length; i++) {
+    insertContent(brand, i)
+  }
+  $("#media").data({ collection: "brand" })
 }
 
 export function placeMusicVideos() {
-  const videos = getUniqueVideos(music)
-  insertContent(music, videos[0], true)
-  insertContent(music, videos[1], false)
-  insertVidoTiles(music)
-  $("#media").data({ collection: "music", videos: videos })
+  clearVideos()
+  for (let i = 0; i < music.length; i++) {
+    insertContent(music, i)
+  }
+  $("#media").data({ collection: "music" })
 }
 
 export function placeAnimationVideos() {
-  const videos = getUniqueVideos(animation)
-  insertContent(animation, videos[0], true)
-  insertContent(animation, videos[1], false)
-  insertVidoTiles(animation)
-  $("#media").data({ collection: "animation", videos: videos })
+  clearVideos()
+  for (let i = 0; i < animation.length; i++) {
+    insertContent(animation, i)
+  }
+  $("#media").data({ collection: "animation" })
 }

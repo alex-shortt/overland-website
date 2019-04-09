@@ -14,10 +14,6 @@ function getCollection() {
   }
 }
 
-function getIndex(isLeft) {
-  return $("#media").data().videos[isLeft ? 0 : 1]
-}
-
 function updateVideo() {
   if (!coll) {
     $("#modal-container > iframe").remove()
