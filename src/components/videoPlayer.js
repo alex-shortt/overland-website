@@ -35,6 +35,8 @@ function updateVideo() {
                      </iframe>`
 
   $("#modal-container > iframe").remove()
+  $("#modal-container > div > h2").text(coll[ind].topText)
+  $("#modal-container > div > h4").text(coll[ind].bottomText)
   $("#modal-container").append(videoCode)
 }
 

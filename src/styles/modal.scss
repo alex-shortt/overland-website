@@ -27,6 +27,22 @@
     }
   }
 
+  &-titles {
+    position: absolute;
+    bottom: 20px;
+    color: white;
+    text-align: center;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    & > * {
+      margin: 0;
+    }
+  }
+
   &-arrow {
     position: absolute;
     top: 50%;
