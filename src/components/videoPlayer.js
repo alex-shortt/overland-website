@@ -24,9 +24,15 @@ function updateVideo() {
     return
   }
 
-  const videoCode = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${
-    coll[ind].video
-  }?autoplay=1&disablekb=1&rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen> </iframe>`
+  const videoCode = `<iframe
+                        width="560"
+                        height="315"
+                        src="https://www.youtube.com/embed/${
+                          coll[ind].video
+                        }?autoplay=1&disablekb=1&rel=0"
+                        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                     </iframe>`
 
   $("#modal-container > iframe").remove()
   $("#modal-container").append(videoCode)
@@ -37,15 +43,12 @@ export function incrVideo(dir) {
   if (ind > coll.length - 1) ind = 0
   if (ind < 0) ind = coll.length - 1
 
-  console.log(coll)
-  console.log("ind", ind)
-
   updateVideo()
 }
 
-export function openVideoPlayer(isLeft) {
+export function openVideoPlayer(index) {
   coll = getCollection()
-  ind = getIndex(isLeft)
+  ind = index
 
   $("#modal").addClass("open")
   updateVideo()

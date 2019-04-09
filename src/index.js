@@ -14,8 +14,6 @@ $(".ovr-logo").click(() => pushPage(""))
 
 // MEDIA
 placeBrandVideos()
-$(".media-video.left").click(() => openVideoPlayer(true))
-$(".media-video.right").click(() => openVideoPlayer(false))
 
 // MODAL
 $("#modal-close").click(() => closeVideoPlayer())
