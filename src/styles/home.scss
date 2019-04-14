@@ -6,6 +6,10 @@
   &-logo {
     margin: 25px;
     width: 175px;
+
+    @media #{$mobile} {
+      width: 35vw;
+    }
   }
 
   &-icons {
@@ -18,11 +22,29 @@
     top: 0;
     left: 0;
 
+    @media #{$mobile} {
+      justify-content: flex-end;
+    }
+
     &-container {
       display: flex;
       justify-content: center;
       height: 20vh;
       width: 100%;
+
+      @media screen and (max-width: 1000px) {
+        height: 15vh;
+      }
+
+      @media screen and (max-width: 750px) {
+        height: 10vh;
+      }
+
+      @media #{$mobile} {
+        height: 80%;
+        width: 50%;
+        flex-direction: column;
+      }
     }
   }
 
@@ -32,9 +54,20 @@
     filter: grayscale(1);
     transition: filter 0.25s linear;
 
+    @media #{$mobile} {
+      max-width: 100%;
+      height: auto;
+      max-height: calc(100% - 28px);
+    }
+
     &-wrapper {
       text-align: center;
       cursor: pointer;
+
+      @media #{$mobile} {
+        flex: 1;
+        overflow: hidden;
+      }
 
       &:hover > img {
         filter: grayscale(0);
@@ -50,6 +83,11 @@
         opacity: 0;
         transition: opacity 0.25s linear;
         color: white;
+
+        @media #{$mobile} {
+          opacity: 1;
+          color: #{$purple};
+        }
       }
     }
   }
