@@ -5,7 +5,7 @@
   align-items: center;
   text-align: center;
 
-  @media #{$mobile} {
+  @media screen and (max-width: 675px) {
     flex-direction: column;
   }
 
@@ -13,7 +13,12 @@
     height: 175px;
     margin: 50px;
 
-    @media #{$mobile} {
+    @media screen and (max-width: 835px) {
+      height: 155px;
+      margin: 30px;
+    }
+
+    @media screen and (max-width: 675px) {
       height: 145px;
       margin: 40px;
     }
@@ -21,7 +26,7 @@
     & > img {
       height: 100%;
 
-      @media #{$mobile} {
+      @media screen and (max-width: 675px) {
         height: calc(100% - 41px);
       }
     }

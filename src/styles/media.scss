@@ -4,7 +4,6 @@ $animationTime: 0.35s;
   flex: 1;
   margin-bottom: 30px;
   overflow-y: auto;
-  overflow-y: auto;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -21,7 +20,7 @@ $animationTime: 0.35s;
     height: 85%;
     margin: 10px 0px;
 
-    @media #{$mobile} {
+    @media screen and (max-width: 650px) {
       width: 100%;
     }
 
