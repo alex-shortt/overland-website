@@ -7,6 +7,8 @@ $ovrpadding: 25px;
   height: calc(100% - #{$ovrpadding});
   padding: #{$ovrpadding};
   padding-top: 0;
+  overflow: hidden;
+  position: relative;
 
   @media #{$mobile} {
     width: 100%;
