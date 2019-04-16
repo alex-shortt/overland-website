@@ -9,6 +9,10 @@
 
     @media #{$mobile} {
       width: 35vw;
+      position: absolute;
+      top: 50%;
+      margin: 0 25px;
+      transform: translateY(-50%);
     }
   }
 
