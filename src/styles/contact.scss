@@ -5,12 +5,25 @@
   align-items: center;
   text-align: center;
 
+  @media #{$mobile} {
+    flex-direction: column;
+  }
+
   &-info {
     height: 175px;
     margin: 50px;
 
+    @media #{$mobile} {
+      height: 145px;
+      margin: 40px;
+    }
+
     & > img {
       height: 100%;
+
+      @media #{$mobile} {
+        height: calc(100% - 41px);
+      }
     }
 
     & > h3 {
