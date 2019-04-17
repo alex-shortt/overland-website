@@ -54,6 +54,10 @@ $animationTime: 0.35s;
       & > h2 {
         color: white;
         overflow: hidden;
+        font-weight: normal;
+        text-transform: uppercase;
+        font-family: "Avang SBM", sans-serif;
+        line-height: 1.3em;
 
         & > span {
           display: inline-block;

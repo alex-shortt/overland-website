@@ -9,16 +9,20 @@ export const brand = [
     topText: "Khaotic Collective",
     bottomText: "Sequoia Launch"
   },
-  // {
-  //   thumbBroken: true,
-  //   video: "FRJ0go0OEWM",
-  //   topText: "Reef",
-  //   bottomText: "Beach Freely"
-  // },
+  {
+    video: "6pDmtzyFTZo",
+    topText: "Reef",
+    bottomText: "Beach Freely"
+  },
   {
     video: "B8_Y4tdwntw",
     topText: "Splat",
     bottomText: "Directors Cut"
+  },
+  {
+    video: "4KxoIRQcEsM",
+    topText: "Fox Sports",
+    bottomText: "Football"
   },
   {
     video: "OUp_3q2pMo0",
@@ -29,11 +33,6 @@ export const brand = [
     video: "-01KseFHJsE",
     topText: "Lucid Monday",
     bottomText: "Los Angeles"
-  },
-  {
-    video: "4KxoIRQcEsM",
-    topText: "Fox Sports",
-    bottomText: "Football"
   },
   {
     video: "leRoYrFXaiM",
@@ -61,12 +60,11 @@ export const music = [
 ]
 
 export const animation = [
-  // {
-  //   thumbBroken: true,
-  //   video: "FRJ0go0OEWM",
-  //   topText: "Reef",
-  //   bottomText: "Beach Freely"
-  // },
+  {
+    video: "6pDmtzyFTZo",
+    topText: "Reef",
+    bottomText: "Beach Freely"
+  },
   {
     video: "B8_Y4tdwntw",
     topText: "Splat",
