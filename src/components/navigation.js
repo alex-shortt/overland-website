@@ -32,7 +32,7 @@ export async function pushPage(page, overload) {
 }
 
 export async function hidePages(nextPage) {
-  const fadePages = ["home", "ovr", "media", "contact"]
+  const fadePages = ["home", "ovr", "media", "about", "contact"]
 
   let stayInMedia = nextPage != "" && !$("#ovr").hasClass("hidden")
 
@@ -70,6 +70,8 @@ export async function showPage(page) {
 
     if (page == "contact") {
       $("#contact").removeClass("hidden")
+    } else if (page == "about") {
+      $("#about").removeClass("hidden")
     } else {
       $("#media").removeClass("hidden")
     }

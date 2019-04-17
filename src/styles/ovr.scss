@@ -84,6 +84,7 @@ $ovrpadding: 25px;
 
     &-logo {
       height: 100%;
+      cursor: pointer;
     }
 
     &-title {
@@ -100,6 +101,7 @@ $ovrpadding: 25px;
     &-menu {
       color: white;
       font-size: 33px;
+      cursor: pointer;
     }
   }
 
@@ -122,6 +124,7 @@ $ovrpadding: 25px;
       display: flex;
       align-items: center;
       padding: 10px;
+      cursor: pointer;
     }
 
     &-icon {
@@ -147,6 +150,7 @@ $ovrpadding: 25px;
       margin: 20px 0;
       margin-left: 50%;
       transform: translateX(-50%);
+      cursor: pointer;
     }
   }
 }
