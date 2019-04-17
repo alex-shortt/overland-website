@@ -115,6 +115,7 @@ $ovrpadding: 25px;
     transform: translateX(100%);
     transition: transform 0.35s ease-in-out;
     z-index: 1;
+    cursor: pointer;
 
     &.active {
       transform: translateX(0);
