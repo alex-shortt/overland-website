@@ -48,16 +48,6 @@ export const brand = [
 
 export const music = [
   {
-    video: "xtXoXjb9FU0",
-    topText: "Lucas Roth",
-    bottomText: "Heart of Gold"
-  },
-  {
-    video: "4HOh1Q0OTcY",
-    topText: "Cailee Rae",
-    bottomText: "Surrender"
-  },
-  {
     video: "czxMS4KTKy4",
     topText: "Rye Balla",
     bottomText: "Brothers Music Video"
@@ -66,6 +56,16 @@ export const music = [
     video: "T0seYxfaoG0",
     topText: "DaBaby",
     bottomText: "Goin Baby"
+  },
+  {
+    video: "xtXoXjb9FU0",
+    topText: "Lucas Roth",
+    bottomText: "Heart of Gold"
+  },
+  {
+    video: "4HOh1Q0OTcY",
+    topText: "Cailee Rae",
+    bottomText: "Surrender"
   }
 ]
 
@@ -81,13 +81,13 @@ export const animation = [
     bottomText: "Directors Cut"
   },
   {
-    video: "xtXoXjb9FU0",
-    topText: "Lucas Roth",
-    bottomText: "Heart of Gold"
-  },
-  {
     video: "czxMS4KTKy4",
     topText: "Rye Balla",
     bottomText: "Brothers Music Video"
+  },
+  {
+    video: "xtXoXjb9FU0",
+    topText: "Lucas Roth",
+    bottomText: "Heart of Gold"
   }
 ]
