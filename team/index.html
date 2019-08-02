@@ -9,6 +9,7 @@
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
       crossorigin="anonymous"
     />
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <link rel="stylesheet" type="text/css" href="main.css" />
     <meta
       name="viewport"
@@ -31,7 +32,23 @@
   </head>
   <!--Made by Alex Shortt-->
   <body>
-
+    <div class="ovr-container">
+      <div class="ovr-main">
+        <div class="ovr-name">
+          <div class="ovr-gradient"></div>
+          <h1 id="name">Caroline Eyer</h1>
+        </div>
+        <div class="ovr-info">
+          <div class="ovr-gradient"></div>
+          <img id="profile-image" />
+          <h2 id="desc"></h2>
+        </div>
+        <img class="ovr-angle" src="/assets/angle-down.svg" />
+      </div>
+      <div class="mosaic-container">
+        <div class="mosaic-wrapper"></div>
+      </div>
+    </div>
     <script src="./team-bundle.js"></script>
   </body>
 </html>

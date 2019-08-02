@@ -1,0 +1,29 @@
+.mosaic {
+  &-container {
+    position: relative;
+    width: 100%;
+    margin-top: 100vh;
+    z-index: 10;
+    background: #{$background};
+    padding: 40px;
+    box-sizing: border-box;
+
+    @media #{$mobile} {
+      padding: 20px;
+    }
+  }
+
+  &-item {
+    width: 33%;
+    padding: 10px;
+    box-sizing: border-box;
+
+    & > img {
+      width: 100%;
+    }
+
+    @media #{$mobile} {
+      width: 50%;
+    }
+  }
+}

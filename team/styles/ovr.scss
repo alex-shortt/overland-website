@@ -1,0 +1,82 @@
+.ovr {
+  &-container {
+    overflow-y: auto;
+  }
+
+  &-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    @media #{$mobile} {
+      flex-direction: column;
+    }
+  }
+
+  &-name {
+    flex: 1.5;
+    margin-left: calc(3vw + 0.5rem);
+
+    h1 {
+      line-height: 1;
+      text-transform: uppercase;
+      text-align: left;
+      font-size: calc(5vw + 1rem);
+      font-family: "Clan OT", sans-serif;
+      font-weight: 100;
+      margin: 0;
+    }
+
+    @media #{$mobile} {
+      margin: 0;
+      flex: 0.3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &-info {
+    flex: 2;
+
+    h2 {
+      font-weight: 100;
+      line-height: 1.5;
+      font-family: Brandon Bld, sans-serif;
+      max-width: 600px;
+      padding-right: 10px;
+
+      @media #{$mobile} {
+        padding: 0 20px;
+        text-align: center;
+        font-size: 1.5rem;
+      }
+    }
+
+    img {
+      width: 100%;
+      max-height: 40vh;
+      object-fit: cover;
+      object-position: top center;
+    }
+  }
+
+  &-gradient {
+    background: purple;
+    height: 10px;
+    width: 100%;
+  }
+
+  &-angle {
+    height: 50px;
+    position: absolute;
+    bottom: 20px;
+  }
+}
