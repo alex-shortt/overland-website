@@ -1,7 +1,7 @@
 export const cloudfrontURL = "https://d1r0vvmkehbh7n.cloudfront.net/"
 
 export const members = {
-  "photographers-carolineeyer": {
+  "caroline": {
     name: "Caroline Eyer",
     desc:
       "Caroline is a freelance photographer based in LA. An Ohio native, she is focused on portraits and lifestyle photography, always capturing the candid moments.",
