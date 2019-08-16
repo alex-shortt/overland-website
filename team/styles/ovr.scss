@@ -40,6 +40,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      width: 90%;
     }
   }
 
@@ -69,9 +70,15 @@
   }
 
   &-gradient {
-    background: purple;
+    background: linear-gradient(90deg, #8f5490, #501a51, #36154e);
     height: 10px;
     width: 100%;
+
+    &.name{
+      @media #{$mobile} {
+        display: none;
+      }
+    }
   }
 
   &-angle {

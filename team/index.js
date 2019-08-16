@@ -46,11 +46,14 @@ shuffle(member.photos).map(photo =>
 `)
 )
 
-$(".mosaic-wrapper").masonry({
-  itemSelector: ".mosaic-item",
-  isAnimated: true
-})
-// // layout Masonry after each image loads
-// $grid.imagesLoaded().progress(function() {
-//   $grid.masonry("layout")
-// })
+$(document).ready(function () {
+  var $container = $(".mosaic-wrapper");
+
+  $container.imagesLoaded(function () {
+    $container.masonry({
+      itemSelector: ".mosaic-item",
+      isAnimated: true
+    });
+  });
+});
+
