@@ -66,11 +66,6 @@ export const music = [
     video: "xtXoXjb9FU0",
     topText: "Lucas Roth",
     bottomText: "Heart of Gold"
-  },
-  {
-    video: "4HOh1Q0OTcY",
-    topText: "Cailee Rae",
-    bottomText: "Surrender"
   }
 ]
 
